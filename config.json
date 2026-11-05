@@ -1,0 +1,25 @@
+{
+  "_说明": "只改下面 stocks 里的股票和阈值即可。所有以 _ 开头的字段都是备注，程序会忽略。",
+  "_dividend说明": "dividend = 近12个月每股现金分红(元,税前)。填 null 表示由程序自动抓取并缓存；若自动值不准，可手工填一个数字覆盖。",
+  "_threshold说明": "high = 股息率高于该值(%)时提醒(通常是股价跌出性价比)；low = 低于该值(%)时提醒；填 null 表示不启用该方向。",
+
+  "notify": {
+    "channel": "pushplus",
+    "_channel可选": "pushplus(微信,推荐) / serverchan(微信) / wecom(企业微信机器人) / none(不推送,只看板)",
+    "board_url": "https://你的用户名.github.io/dividend-monitor/"
+  },
+
+  "default_high": 5.0,
+  "default_low": 3.0,
+  "repeat_days": 7,
+  "_repeat_days说明": "持续停留在提醒区间时，每隔多少天复报一次，避免每天重复轰炸。",
+
+  "stocks": [
+    { "code": "601398", "name": "工商银行",   "dividend": null, "high": 5.5, "low": 3.5 },
+    { "code": "601288", "name": "农业银行",   "dividend": null, "high": 5.5, "low": 3.5 },
+    { "code": "600900", "name": "长江电力",   "dividend": null, "high": 4.0, "low": 2.5 },
+    { "code": "601088", "name": "中国神华",   "dividend": null, "high": 6.0, "low": 4.0 },
+    { "code": "600028", "name": "中国石化",   "dividend": null, "high": 6.0, "low": 4.0 },
+    { "code": "000651", "name": "格力电器",   "dividend": null, "high": 6.0, "low": 3.5 }
+  ]
+}

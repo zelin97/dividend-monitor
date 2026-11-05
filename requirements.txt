@@ -1,0 +1,3 @@
+# 免费、免注册、免 token 的开源财经数据接口库
+akshare
+requests>=2.31
